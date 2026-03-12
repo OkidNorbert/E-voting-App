@@ -803,14 +803,30 @@ def create_position():
     title = prompt("Position Title (e.g. President, Governor, Senator): ")
     if not title: error("Title cannot be empty."); pause(); return
     description = prompt("Description: ")
-    level = prompt("Level (National/Regional/Local): ")
-    if level.lower() not in ["national", "regional", "local"]: error("Invalid level."); pause(); return
+    level = ""
+    while level.lower() not in ["national", "regional", "local"]:
+        level = prompt("Level (National/Regional/Local): ").strip()
+        if level.lower() not in ["national", "regional", "local"]:
+            error("Invalid level. Choose from: National, Regional, Local")
     try:
         max_winners = int(prompt("Number of winners/seats: "))
         if max_winners <= 0: error("Must be at least 1."); pause(); return
     except ValueError: error("Invalid number."); pause(); return
-    min_cand_age = prompt(f"Minimum candidate age [{MIN_CANDIDATE_AGE}]: ")
-    min_cand_age = int(min_cand_age) if min_cand_age.isdigit() else MIN_CANDIDATE_AGE
+    min_cand_age = MIN_CANDIDATE_AGE
+    while True:
+        raw = prompt(f"Minimum candidate age [{MIN_CANDIDATE_AGE}–{MAX_CANDIDATE_AGE}]: ").strip()
+        if not raw:
+            min_cand_age = MIN_CANDIDATE_AGE
+            break
+        if raw.isdigit():
+            val = int(raw)
+            if MIN_CANDIDATE_AGE <= val <= MAX_CANDIDATE_AGE:
+                min_cand_age = val
+                break
+            else:
+                error(f"Age must be between {MIN_CANDIDATE_AGE} and {MAX_CANDIDATE_AGE}. Candidates older than {MAX_CANDIDATE_AGE} are ineligible.")
+        else:
+            error("Please enter a valid number.")
     positions[position_id_counter] = {
         "id": position_id_counter, "title": title, "description": description,
         "level": level.capitalize(), "max_winners": max_winners, "min_candidate_age": min_cand_age,
@@ -894,14 +910,31 @@ def create_poll():
     title = prompt("Poll/Election Title: ")
     if not title: error("Title cannot be empty."); pause(); return
     description = prompt("Description: ")
-    election_type = prompt("Election Type (General/Primary/By-election/Referendum): ")
-    start_date = prompt("Start Date (YYYY-MM-DD): ")
-    end_date = prompt("End Date (YYYY-MM-DD): ")
-    try:
-        sd = datetime.datetime.strptime(start_date, "%Y-%m-%d")
-        ed = datetime.datetime.strptime(end_date, "%Y-%m-%d")
-        if ed <= sd: error("End date must be after start date."); pause(); return
-    except ValueError: error("Invalid date format."); pause(); return
+    VALID_ELECTION_TYPES = ["General", "Primary", "By-election", "Referendum"]
+    election_type = ""
+    while election_type not in VALID_ELECTION_TYPES:
+        election_type = prompt("Election Type (General/Primary/By-election/Referendum): ").strip()
+        if election_type not in VALID_ELECTION_TYPES:
+            error(f"Invalid election type. Choose from: {', '.join(VALID_ELECTION_TYPES)}")
+
+    sd = None
+    while sd is None:
+        start_date = prompt("Start Date (YYYY-MM-DD): ").strip()
+        try:
+            sd = datetime.datetime.strptime(start_date, "%Y-%m-%d")
+        except ValueError:
+            error("Invalid date format. Please use YYYY-MM-DD (e.g. 2026-04-15)")
+
+    ed = None
+    while ed is None:
+        end_date = prompt("End Date (YYYY-MM-DD): ").strip()
+        try:
+            ed = datetime.datetime.strptime(end_date, "%Y-%m-%d")
+            if ed <= sd:
+                error("End date must be after start date. Please enter a later date.")
+                ed = None
+        except ValueError:
+            error("Invalid date format. Please use YYYY-MM-DD (e.g. 2026-05-30)")
     if not positions: error("No positions available. Create positions first."); pause(); return
     subheader("Available Positions", THEME_ADMIN_ACCENT)
     active_positions = {pid: p for pid, p in positions.items() if p["is_active"]}

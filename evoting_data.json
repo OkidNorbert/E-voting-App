@@ -1,0 +1,506 @@
+{
+  "candidates": {
+    "1": {
+      "id": 1,
+      "full_name": "Najjuma teopista",
+      "national_id": "CM123456789102",
+      "date_of_birth": "1998-01-02",
+      "age": 28,
+      "gender": "F",
+      "education": "Bachelor's Degree",
+      "party": "NUP",
+      "manifesto": "I am a bachelor degree holder",
+      "address": "Buguju",
+      "phone": "0740505090",
+      "email": "tetrikag@gmail.com",
+      "has_criminal_record": false,
+      "years_experience": 4,
+      "is_active": false,
+      "is_approved": true,
+      "created_at": "2026-03-12 11:14:47.957400",
+      "created_by": "admin"
+    },
+    "2": {
+      "id": 2,
+      "full_name": "Najjuma Teopista",
+      "national_id": "CM12345678091cd",
+      "date_of_birth": "1999-02-03",
+      "age": 27,
+      "gender": "F",
+      "education": "Bachelor's Degree",
+      "party": "nup",
+      "manifesto": "none",
+      "address": "bugujju",
+      "phone": "0780345670",
+      "email": "trieal@gmail.com",
+      "has_criminal_record": false,
+      "years_experience": 4,
+      "is_active": true,
+      "is_approved": true,
+      "created_at": "2026-03-12 11:26:40.797839",
+      "created_by": "admin"
+    },
+    "3": {
+      "id": 3,
+      "full_name": "Okello James",
+      "national_id": "cm3839437483h",
+      "date_of_birth": "1990-01-01",
+      "age": 36,
+      "gender": "M",
+      "education": "Master's Degree",
+      "party": "NRM",
+      "manifesto": "WE ARE ALL COOKED",
+      "address": "MUKONO",
+      "phone": "1234567890",
+      "email": "james@gmail.com",
+      "has_criminal_record": false,
+      "years_experience": 8,
+      "is_active": true,
+      "is_approved": true,
+      "created_at": "2026-03-12 11:32:07.863094",
+      "created_by": "admin"
+    }
+  },
+  "candidate_id_counter": 4,
+  "voting_stations": {
+    "1": {
+      "id": 1,
+      "name": "STATION ECHO",
+      "location": "UCU MUKONO",
+      "region": "MUKONO",
+      "capacity": 10000,
+      "registered_voters": 0,
+      "supervisor": "OKIDI",
+      "contact": "0771032224",
+      "opening_time": "9:00",
+      "closing_time": "4:00",
+      "is_active": true,
+      "created_at": "2026-03-12 10:49:11.151637",
+      "created_by": "admin"
+    }
+  },
+  "station_id_counter": 2,
+  "polls": {
+    "2": {
+      "id": 2,
+      "title": "PRESIDENT",
+      "description": "HEAD OF STAE",
+      "election_type": "General",
+      "start_date": "2026-03-12",
+      "end_date": "2026-03-25",
+      "positions": [
+        {
+          "position_id": 3,
+          "position_title": "PRESIDENT",
+          "candidate_ids": [
+            2,
+            3
+          ],
+          "max_winners": 1
+        }
+      ],
+      "station_ids": [
+        1
+      ],
+      "status": "open",
+      "total_votes_cast": 1,
+      "created_at": "2026-03-12 11:34:21.661711",
+      "created_by": "admin"
+    }
+  },
+  "poll_id_counter": 3,
+  "positions": {
+    "1": {
+      "id": 1,
+      "title": "President",
+      "description": "HEAD OF STATE",
+      "level": "National",
+      "max_winners": 5,
+      "min_candidate_age": 90,
+      "is_active": false,
+      "created_at": "2026-03-12 11:06:30.159222",
+      "created_by": "admin"
+    },
+    "2": {
+      "id": 2,
+      "title": "PRESIDENT",
+      "description": "HEAD OF STATE",
+      "level": "National",
+      "max_winners": 4,
+      "min_candidate_age": 25,
+      "is_active": true,
+      "created_at": "2026-03-12 11:24:01.061817",
+      "created_by": "admin"
+    },
+    "3": {
+      "id": 3,
+      "title": "PRESIDENT",
+      "description": "HEAD OF STATE",
+      "level": "National",
+      "max_winners": 1,
+      "min_candidate_age": 25,
+      "is_active": true,
+      "created_at": "2026-03-12 11:24:38.732061",
+      "created_by": "admin"
+    }
+  },
+  "position_id_counter": 4,
+  "voters": {
+    "1": {
+      "id": 1,
+      "full_name": "Rubagumya Alvin",
+      "national_id": "CM09876543212F",
+      "date_of_birth": "2000-11-12",
+      "age": 25,
+      "gender": "M",
+      "address": "Mukono",
+      "phone": "0751660138",
+      "email": "alvinrubagumya@gmail.com",
+      "password": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
+      "voter_card_number": "MA3OMJQLFW8Q",
+      "station_id": 1,
+      "is_verified": true,
+      "is_active": true,
+      "has_voted_in": [
+        2,
+        2
+      ],
+      "registered_at": "2026-03-12 10:59:19.001100",
+      "role": "voter"
+    }
+  },
+  "voter_id_counter": 2,
+  "admins": {
+    "1": {
+      "id": 1,
+      "username": "admin",
+      "password": "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9",
+      "full_name": "System Administrator",
+      "email": "admin@evote.com",
+      "role": "super_admin",
+      "created_at": "2026-03-12 10:43:09.084755",
+      "is_active": true
+    }
+  },
+  "admin_id_counter": 2,
+  "votes": [
+    {
+      "vote_id": "35468f5d371aace43",
+      "poll_id": 2,
+      "position_id": 3,
+      "candidate_id": 2,
+      "voter_id": 1,
+      "station_id": 1,
+      "timestamp": "2026-03-12 11:36:05.315343",
+      "abstained": false
+    }
+  ],
+  "audit_log": [
+    {
+      "timestamp": "2026-03-12 10:43:58.089211",
+      "action": "LOGIN_FAILED",
+      "user": "OKIDI NORBERT",
+      "details": "Invalid admin credentials"
+    },
+    {
+      "timestamp": "2026-03-12 10:45:09.413636",
+      "action": "LOGIN",
+      "user": "admin",
+      "details": "Admin login successful"
+    },
+    {
+      "timestamp": "2026-03-12 10:49:11.151688",
+      "action": "CREATE_STATION",
+      "user": "admin",
+      "details": "Created station: STATION ECHO (ID: 1)"
+    },
+    {
+      "timestamp": "2026-03-12 10:53:44.549929",
+      "action": "LOGOUT",
+      "user": "admin",
+      "details": "Admin logged out"
+    },
+    {
+      "timestamp": "2026-03-12 10:59:19.001138",
+      "action": "REGISTER",
+      "user": "Rubagumya Alvin",
+      "details": "New voter registered with card: MA3OMJQLFW8Q"
+    },
+    {
+      "timestamp": "2026-03-12 10:59:33.369598",
+      "action": "LOGIN",
+      "user": "admin",
+      "details": "Admin login successful"
+    },
+    {
+      "timestamp": "2026-03-12 11:06:30.159263",
+      "action": "CREATE_POSITION",
+      "user": "admin",
+      "details": "Created position: President (ID: 1)"
+    },
+    {
+      "timestamp": "2026-03-12 11:07:17.953504",
+      "action": "CREATE_POLL",
+      "user": "admin",
+      "details": "Created poll: PRESIDENT (ID: 1)"
+    },
+    {
+      "timestamp": "2026-03-12 11:07:39.114402",
+      "action": "LOGOUT",
+      "user": "admin",
+      "details": "Admin logged out"
+    },
+    {
+      "timestamp": "2026-03-12 11:08:04.022946",
+      "action": "LOGIN_FAILED",
+      "user": "1",
+      "details": "Invalid voter credentials"
+    },
+    {
+      "timestamp": "2026-03-12 11:08:18.598785",
+      "action": "LOGIN_FAILED",
+      "user": "123456",
+      "details": "Invalid voter credentials"
+    },
+    {
+      "timestamp": "2026-03-12 11:08:29.951029",
+      "action": "LOGIN_FAILED",
+      "user": "1",
+      "details": "Invalid voter credentials"
+    },
+    {
+      "timestamp": "2026-03-12 11:08:43.246990",
+      "action": "LOGIN_FAILED",
+      "user": "admin",
+      "details": "Invalid admin credentials"
+    },
+    {
+      "timestamp": "2026-03-12 11:08:54.315478",
+      "action": "LOGIN",
+      "user": "admin",
+      "details": "Admin login successful"
+    },
+    {
+      "timestamp": "2026-03-12 11:09:12.217150",
+      "action": "LOGOUT",
+      "user": "admin",
+      "details": "Admin logged out"
+    },
+    {
+      "timestamp": "2026-03-12 11:09:19.688456",
+      "action": "LOGIN_FAILED",
+      "user": "MA3OMJQLFW8Q",
+      "details": "Voter not verified"
+    },
+    {
+      "timestamp": "2026-03-12 11:09:38.387838",
+      "action": "LOGIN_FAILED",
+      "user": "",
+      "details": "Invalid voter credentials"
+    },
+    {
+      "timestamp": "2026-03-12 11:09:47.646851",
+      "action": "LOGIN",
+      "user": "admin",
+      "details": "Admin login successful"
+    },
+    {
+      "timestamp": "2026-03-12 11:10:34.948322",
+      "action": "VERIFY_ALL_VOTERS",
+      "user": "admin",
+      "details": "Verified 1 voters"
+    },
+    {
+      "timestamp": "2026-03-12 11:10:54.577392",
+      "action": "LOGOUT",
+      "user": "admin",
+      "details": "Admin logged out"
+    },
+    {
+      "timestamp": "2026-03-12 11:11:02.127916",
+      "action": "LOGIN",
+      "user": "MA3OMJQLFW8Q",
+      "details": "Voter login successful"
+    },
+    {
+      "timestamp": "2026-03-12 11:11:25.994427",
+      "action": "LOGOUT",
+      "user": "MA3OMJQLFW8Q",
+      "details": "Voter logged out"
+    },
+    {
+      "timestamp": "2026-03-12 11:11:31.821995",
+      "action": "LOGIN",
+      "user": "admin",
+      "details": "Admin login successful"
+    },
+    {
+      "timestamp": "2026-03-12 11:14:47.957451",
+      "action": "CREATE_CANDIDATE",
+      "user": "admin",
+      "details": "Created candidate: Najjuma teopista (ID: 1)"
+    },
+    {
+      "timestamp": "2026-03-12 11:15:09.747488",
+      "action": "ASSIGN_CANDIDATES",
+      "user": "admin",
+      "details": "Updated candidates for poll: PRESIDENT"
+    },
+    {
+      "timestamp": "2026-03-12 11:15:49.470499",
+      "action": "ASSIGN_CANDIDATES",
+      "user": "admin",
+      "details": "Updated candidates for poll: PRESIDENT"
+    },
+    {
+      "timestamp": "2026-03-12 11:16:28.515355",
+      "action": "UPDATE_POLL",
+      "user": "admin",
+      "details": "Updated poll: PRESIDENT"
+    },
+    {
+      "timestamp": "2026-03-12 11:17:36.774220",
+      "action": "UPDATE_POSITION",
+      "user": "admin",
+      "details": "Updated position: President"
+    },
+    {
+      "timestamp": "2026-03-12 11:18:26.686518",
+      "action": "DELETE_CANDIDATE",
+      "user": "admin",
+      "details": "Deactivated candidate: Najjuma teopista (ID: 1)"
+    },
+    {
+      "timestamp": "2026-03-12 11:23:10.933800",
+      "action": "DELETE_POSITION",
+      "user": "admin",
+      "details": "Deactivated position: President"
+    },
+    {
+      "timestamp": "2026-03-12 11:24:01.061865",
+      "action": "CREATE_POSITION",
+      "user": "admin",
+      "details": "Created position: PRESIDENT (ID: 2)"
+    },
+    {
+      "timestamp": "2026-03-12 11:24:38.732128",
+      "action": "CREATE_POSITION",
+      "user": "admin",
+      "details": "Created position: PRESIDENT (ID: 3)"
+    },
+    {
+      "timestamp": "2026-03-12 11:26:40.797886",
+      "action": "CREATE_CANDIDATE",
+      "user": "admin",
+      "details": "Created candidate: Najjuma Teopista (ID: 2)"
+    },
+    {
+      "timestamp": "2026-03-12 11:26:48.768775",
+      "action": "ASSIGN_CANDIDATES",
+      "user": "admin",
+      "details": "Updated candidates for poll: PRESIDENT"
+    },
+    {
+      "timestamp": "2026-03-12 11:27:53.128299",
+      "action": "ASSIGN_CANDIDATES",
+      "user": "admin",
+      "details": "Updated candidates for poll: PRESIDENT"
+    },
+    {
+      "timestamp": "2026-03-12 11:28:50.923998",
+      "action": "UPDATE_POLL",
+      "user": "admin",
+      "details": "Updated poll: PRESIDENT"
+    },
+    {
+      "timestamp": "2026-03-12 11:29:08.516980",
+      "action": "ASSIGN_CANDIDATES",
+      "user": "admin",
+      "details": "Updated candidates for poll: PRESIDENT"
+    },
+    {
+      "timestamp": "2026-03-12 11:30:04.941180",
+      "action": "ASSIGN_CANDIDATES",
+      "user": "admin",
+      "details": "Updated candidates for poll: PRESIDENT"
+    },
+    {
+      "timestamp": "2026-03-12 11:30:20.219135",
+      "action": "ASSIGN_CANDIDATES",
+      "user": "admin",
+      "details": "Updated candidates for poll: PRESIDENT"
+    },
+    {
+      "timestamp": "2026-03-12 11:32:07.863133",
+      "action": "CREATE_CANDIDATE",
+      "user": "admin",
+      "details": "Created candidate: Okello James (ID: 3)"
+    },
+    {
+      "timestamp": "2026-03-12 11:32:22.321072",
+      "action": "ASSIGN_CANDIDATES",
+      "user": "admin",
+      "details": "Updated candidates for poll: PRESIDENT"
+    },
+    {
+      "timestamp": "2026-03-12 11:33:12.357358",
+      "action": "DELETE_POLL",
+      "user": "admin",
+      "details": "Deleted poll: PRESIDENT"
+    },
+    {
+      "timestamp": "2026-03-12 11:34:21.661752",
+      "action": "CREATE_POLL",
+      "user": "admin",
+      "details": "Created poll: PRESIDENT (ID: 2)"
+    },
+    {
+      "timestamp": "2026-03-12 11:34:50.020208",
+      "action": "ASSIGN_CANDIDATES",
+      "user": "admin",
+      "details": "Updated candidates for poll: PRESIDENT"
+    },
+    {
+      "timestamp": "2026-03-12 11:34:59.575294",
+      "action": "OPEN_POLL",
+      "user": "admin",
+      "details": "Opened poll: PRESIDENT"
+    },
+    {
+      "timestamp": "2026-03-12 11:35:08.207112",
+      "action": "LOGOUT",
+      "user": "admin",
+      "details": "Admin logged out"
+    },
+    {
+      "timestamp": "2026-03-12 11:35:21.120686",
+      "action": "LOGIN",
+      "user": "admin",
+      "details": "Admin login successful"
+    },
+    {
+      "timestamp": "2026-03-12 11:35:43.692277",
+      "action": "LOGOUT",
+      "user": "admin",
+      "details": "Admin logged out"
+    },
+    {
+      "timestamp": "2026-03-12 11:35:48.811609",
+      "action": "LOGIN",
+      "user": "MA3OMJQLFW8Q",
+      "details": "Voter login successful"
+    },
+    {
+      "timestamp": "2026-03-12 11:36:05.315444",
+      "action": "CAST_VOTE",
+      "user": "MA3OMJQLFW8Q",
+      "details": "Voted in poll: PRESIDENT (Hash: 35468f5d371aace4)"
+    },
+    {
+      "timestamp": "2026-03-12 11:36:12.195150",
+      "action": "LOGOUT",
+      "user": "MA3OMJQLFW8Q",
+      "details": "Voter logged out"
+    }
+  ]
+}
