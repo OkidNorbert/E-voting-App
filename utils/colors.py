@@ -58,24 +58,38 @@ THEME_VOTER_ACCENT = MAGENTA
 def colored(text: str, color: str) -> str:
     return f"{color}{text}{RESET}"
 
+def app_banner() -> None:
+    print(f"""{THEME_LOGIN}
+  ███████╗    ██╗   ██╗ ██████╗ ████████╗██╗███╗   ██╗ ██████╗ 
+  ██╔════╝    ██║   ██║██╔═══██╗╚══██╔══╝██║████╗  ██║██╔════╝ 
+  █████╗█████╗██║   ██║██║   ██║   ██║   ██║██╔██╗ ██║██║  ███╗
+  ██╔══╝╚════╝╚██╗ ██╔╝██║   ██║   ██║   ██║██║╚██╗██║██║   ██║
+  ███████╗     ╚████╔╝ ╚██████╔╝   ██║   ██║██║ ╚████║╚██████╔╝
+  ╚══════╝      ╚═══╝   ╚═════╝    ╚═╝   ╚═╝╚═╝  ╚═══╝ ╚═════╝{RESET}
+""")
 
 def header(title: str, theme_color: str) -> None:
     width = 58
-    print(f"  {theme_color}{'═' * width}{RESET}")
-    print(f"  {theme_color}{BOLD} {title.center(width - 2)} {RESET}{theme_color} {RESET}")
-    print(f"  {theme_color}{'═' * width}{RESET}")
+    print(f"  {theme_color}╭{'─' * width}╮{RESET}")
+    print(f"  {theme_color}│{RESET} {BOLD}{theme_color}{title.center(width - 2)}{RESET} {theme_color}│{RESET}")
+    print(f"  {theme_color}╰{'─' * width}╯{RESET}")
 
+def panel(text: str, theme_color: str, width: int = 58) -> None:
+    lines = text.strip().split("\n")
+    print(f"  {theme_color}╭{'─' * width}╮{RESET}")
+    for line in lines:
+        padded = f" {line} ".ljust(width)
+        print(f"  {theme_color}│{RESET}{padded}{theme_color}│{RESET}")
+    print(f"  {theme_color}╰{'─' * width}╯{RESET}")
 
 def subheader(title: str, theme_color: str) -> None:
-    print(f"\n  {theme_color}{BOLD}▸ {title}{RESET}")
-
+    print(f"\n  {theme_color}{BOLD}► {title}{RESET}")
 
 def table_header(format_str: str, theme_color: str) -> None:
     print(f"  {theme_color}{BOLD}{format_str}{RESET}")
 
-
 def table_divider(width: int, theme_color: str) -> None:
-    print(f"  {theme_color}{'─' * width}{RESET}")
+    print(f"  {theme_color}{'╌' * width}{RESET}")
 
 
 def error(msg: str) -> None:
